@@ -7,14 +7,18 @@ ui <- navbarPage(
         includeMarkdown("README.md")
     ),
     corrTableUI("corr"),
-    navbarMenu("DE results"),
-    navbarMenu("motif heatmap"),
-    navbarMenu("motif network"),
+    heatmapUI("heatmap"),
+    pairHeatmapUI("test"),
+    bipartiteUI("ora"),
     navbarMenu("pathway")
 )
 
 server <- function(input, output, session) {
     corrTableServer("corr")
+    heatmapServer("heatmap")
+    pairHeatmapServer("test")
+    bipartiteServer("ora")
+
 }
 
 shinyApp(ui = ui, server = server)

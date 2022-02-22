@@ -4,19 +4,19 @@ corrTableUI <- function(id) {
     navbarMenu(
         "correlation Table",
         tabPanel(
-            ns("human(hmchimp)"),
+            "human(hmchimp)",
             DT::dataTableOutput(ns("hmChimpCorrTable"))
         ),
         tabPanel(
-            ns("human(hmoran)"),
+            "human(hmoran)",
             DT::dataTableOutput(ns("hmOranCorrTable"))
         ),
         tabPanel(
-            ns("chimpanzee"),
+            "chimpanzee",
             DT::dataTableOutput(ns("chimpCorrTable"))
         ),
         tabPanel(
-            ns("orangutans"),
+            "orangutans",
             DT::dataTableOutput(ns("oranCorrTable"))
         )
     )
